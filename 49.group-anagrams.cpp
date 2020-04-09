@@ -40,36 +40,36 @@ using namespace std;
 
 // @lc code=start
 class Solution {
-public:
-    vector<vector<string>> groupAnagrams(vector<string> &strs) {
-        const int N = size(strs);
-        unordered_map<string, vector<string>> groups;
-        for (string &str : strs) {
-            groups[sorted_str(str)].push_back(move(str));
-        }
-        vector<vector<string>> ret;
-        ret.reserve(N);
-        for (auto &p : groups) {
-            ret.push_back(move(p.second));
-        }
-        return ret;
+ public:
+  vector<vector<string>> groupAnagrams(vector<string> &strs) {
+    const int N = size(strs);
+    unordered_map<string, vector<string>> groups;
+    for (string &str : strs) {
+      groups[sorted_str(str)].push_back(move(str));
     }
+    vector<vector<string>> ret;
+    ret.reserve(N);
+    for (auto &p : groups) {
+      ret.push_back(move(p.second));
+    }
+    return ret;
+  }
 
-private:
-    static string sorted_str(const string &str) {
-        static array<int, 26> counts;
-        counts.fill(0);
-        for (const char c : str) {
-            ++counts[c - 97];
-        }
-        string ret;
-        ret.reserve(size(str));
-        char c = 97;
-        for (const int count : counts) {
-            fill_n(back_inserter(ret), count, c);
-            ++c;
-        }
-        return ret;
+ private:
+  static string sorted_str(const string &str) {
+    static array<int, 26> counts;
+    counts.fill(0);
+    for (const char c : str) {
+      ++counts[c - 97];
     }
+    string ret;
+    ret.reserve(size(str));
+    char c = 97;
+    for (const int count : counts) {
+      fill_n(back_inserter(ret), count, c);
+      ++c;
+    }
+    return ret;
+  }
 };
 // @lc code=end

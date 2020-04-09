@@ -30,7 +30,7 @@
         }
       ],
       "preLaunchTask": "clang++ build active file",
-      "miDebuggerPath": "/usr/bin/gdb"
+      "miDebuggerPath": "C:\\Users\\tothe\\scoop\\apps\\gcc\\current\\bin\\gdb.exe"
     }
   ]
 }

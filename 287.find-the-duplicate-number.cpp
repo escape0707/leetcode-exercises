@@ -47,18 +47,18 @@ using namespace std;
 
 // @lc code=start
 class Solution {
-public:
-    int findDuplicate(vector<int>& nums) {
-        int start = 0, slow = start, fast = slow;
-        do {
-            slow = nums[slow];
-            fast = nums[nums[fast]];
-        } while (slow != fast);
-        while (slow != start) {
-            slow = nums[slow];
-            start = nums[start];
-        }
-        return slow;
+ public:
+  int findDuplicate(vector<int> &nums) {
+    int start = 0, slow = start, fast = slow;
+    do {
+      slow = nums[slow];
+      fast = nums[nums[fast]];
+    } while (slow != fast);
+    while (slow != start) {
+      slow = nums[slow];
+      start = nums[start];
     }
+    return slow;
+  }
 };
 // @lc code=end

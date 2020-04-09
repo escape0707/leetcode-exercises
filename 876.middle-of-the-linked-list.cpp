@@ -59,9 +59,9 @@
 using namespace std;
 
 struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
+  int val;
+  ListNode *next;
+  ListNode(int x) : val(x), next(NULL) {}
 };
 // @lc code=start
 /**
@@ -73,17 +73,17 @@ struct ListNode {
  * };
  */
 class Solution {
-public:
-    ListNode *middleNode(ListNode *head) {
-        ListNode *middle = head;
-        while (head) {
-            head = head->next;
-            if (head) {
-                head = head->next;
-                middle = middle->next;
-            }
-        }
-        return middle;
+ public:
+  ListNode *middleNode(ListNode *head) {
+    ListNode *middle = head;
+    while (head) {
+      head = head->next;
+      if (head) {
+        head = head->next;
+        middle = middle->next;
+      }
     }
+    return middle;
+  }
 };
 // @lc code=end

@@ -35,9 +35,9 @@ using namespace std;
 
 // @lc code=start
 class Solution {
-public:
-    void moveZeroes(vector<int>& nums) {
-        fill(remove(begin(nums), end(nums), 0), end(nums), 0);
-    }
+ public:
+  void moveZeroes(vector<int> &nums) {
+    fill(remove(begin(nums), end(nums), 0), end(nums), 0);
+  }
 };
 // @lc code=end

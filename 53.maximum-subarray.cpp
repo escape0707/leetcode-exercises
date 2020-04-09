@@ -36,16 +36,16 @@ using namespace std;
 
 // @lc code=start
 class Solution {
-public:
-    int maxSubArray(vector<int>& nums) {
-        int ret = INT_MIN;
-        accumulate(cbegin(nums), cend(nums), 0,
-                   [&ret](const int prev, const int curr) {
-                       const int partial = prev > 0 ? prev + curr : curr;
-                       ret = max(ret, partial);
-                       return partial;
-                   });
-        return ret;
-    }
+ public:
+  int maxSubArray(vector<int> &nums) {
+    int ret = numeric_limits<int>::min();
+    accumulate(cbegin(nums), cend(nums), 0,
+               [&ret](const int prev, const int curr) {
+                 const int partial = prev > 0 ? prev + curr : curr;
+                 ret = max(ret, partial);
+                 return partial;
+               });
+    return ret;
+  }
 };
 // @lc code=end

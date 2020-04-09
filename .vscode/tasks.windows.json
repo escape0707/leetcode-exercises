@@ -4,7 +4,7 @@
     {
       "type": "shell",
       "label": "clang++ build active file",
-      "command": "/usr/bin/clang++",
+      "command": "C:\\Users\\tothe\\scoop\\apps\\llvm\\current\\bin\\clang++.exe",
       "args": [
         "-g",
         "${file}",
@@ -13,8 +13,7 @@
         "-Weverything",
         "-Wno-exit-time-destructors",
         "-Wno-global-constructors",
-        "-Wno-c++98-compat",
-        "-Wno-c++17-extensions"
+        "-Wno-c++98-compat"
       ],
       "problemMatcher": {
         "base": "$gcc",

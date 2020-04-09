@@ -61,9 +61,9 @@ using namespace std;
 using namespace std;
 
 class Solution {
-public:
-    int singleNumber(vector<int> &nums) {
-        return accumulate(begin(nums), end(nums), 0, bit_xor<int>());
-    }
+ public:
+  int singleNumber(vector<int> &nums) {
+    return accumulate(begin(nums), end(nums), 0, bit_xor<int>());
+  }
 };
 // @lc code=end

@@ -39,22 +39,22 @@ using namespace std;
 
 // @lc code=start
 class Solution {
-public:
-    bool isHappy(int n) {
-        auto next_of = [](int num) {
-            int ret = 0;
-            while (num) {
-                ret += static_cast<int>(pow(num % 10, 2));
-                num /= 10;
-            }
-            return ret;
-        };
-        int slow = n, fast = n;
-        do {
-            slow = next_of(slow);
-            fast = next_of(next_of(fast));
-        } while (slow != fast);
-        return slow == 1;
-    }
+ public:
+  bool isHappy(int n) {
+    auto next_of = [](int num) {
+      int ret = 0;
+      while (num) {
+        ret += static_cast<int>(pow(num % 10, 2));
+        num /= 10;
+      }
+      return ret;
+    };
+    int slow = n, fast = n;
+    do {
+      slow = next_of(slow);
+      fast = next_of(next_of(fast));
+    } while (slow != fast);
+    return slow == 1;
+  }
 };
 // @lc code=end

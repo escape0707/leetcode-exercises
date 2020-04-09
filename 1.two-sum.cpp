@@ -35,19 +35,19 @@ using namespace std;
 
 // @lc code=start
 class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        unordered_map<int, int> occurred;
-        const int N = size(nums);
-        for (int i = 0; i < N; ++i) {
-            const int num = nums[i];
-            const auto pos = occurred.find(target - num);
-            if (pos != end(occurred)) {
-                return {pos->second, i};
-            }
-            occurred.emplace(num, i);
-        }
-        throw invalid_argument(nullptr);
+ public:
+  vector<int> twoSum(vector<int> &nums, int target) {
+    unordered_map<int, int> occurred;
+    const int N = size(nums);
+    for (int i = 0; i < N; ++i) {
+      const int num = nums[i];
+      const auto pos = occurred.find(target - num);
+      if (pos != end(occurred)) {
+        return {pos->second, i};
+      }
+      occurred.emplace(num, i);
     }
+    throw invalid_argument(nullptr);
+  }
 };
 // @lc code=end

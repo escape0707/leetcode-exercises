@@ -44,17 +44,17 @@ using namespace std;
 
 // @lc code=start
 class Solution {
-public:
-    vector<int> plusOne(vector<int>& digits) {
-        for (int i = size(digits) - 1; i >= 0; --i) {
-            if (digits[i] < 9) {
-                ++digits[i];
-                return digits;
-            }
-            digits[i] = 0;
-        }
-        digits.insert(cbegin(digits), 1);
+ public:
+  vector<int> plusOne(vector<int> &digits) {
+    for (int i = size(digits) - 1; i >= 0; --i) {
+      if (digits[i] < 9) {
+        ++digits[i];
         return digits;
+      }
+      digits[i] = 0;
     }
+    digits.insert(cbegin(digits), 1);
+    return digits;
+  }
 };
 // @lc code=end

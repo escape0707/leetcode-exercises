@@ -61,28 +61,28 @@ using namespace std;
 
 // @lc code=start
 class Solution {
-public:
-    int maxProfit(vector<int>& prices) {
-        // if (prices.empty()) {
-        //     return 0;
-        // }
-        // int profit = 0;
-        // auto prev = cbegin(prices), curr = prev + 1;
-        // const auto e = cend(prices);
-        // while (curr != e) {
-        //     const int diff = *curr++ - *prev++;
-        //     if (diff > 0) {
-        //         profit += diff;
-        //     }
-        // }
-        // return profit;
-        if (prices.empty()) {
-            return 0;
-        }
-        adjacent_difference(cbegin(prices), cend(prices), begin(prices));
-        return accumulate(
-            cbegin(prices) + 1, cend(prices), 0,
-            [](const int a, const int b) { return b > 0 ? a + b : a; });
+ public:
+  int maxProfit(vector<int> &prices) {
+    // if (prices.empty()) {
+    //     return 0;
+    // }
+    // int profit = 0;
+    // auto prev = cbegin(prices), curr = prev + 1;
+    // const auto e = cend(prices);
+    // while (curr != e) {
+    //     const int diff = *curr++ - *prev++;
+    //     if (diff > 0) {
+    //         profit += diff;
+    //     }
+    // }
+    // return profit;
+    if (prices.empty()) {
+      return 0;
     }
+    adjacent_difference(cbegin(prices), cend(prices), begin(prices));
+    return accumulate(
+        cbegin(prices) + 1, cend(prices), 0,
+        [](const int a, const int b) { return b > 0 ? a + b : a; });
+  }
 };
 // @lc code=end
