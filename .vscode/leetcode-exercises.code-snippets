@@ -28,6 +28,7 @@
       "",
       "from collections import *",
       "from functools import *",
+      "from heapq import *",
       "from itertools import *",
       "from operator import *",
       "from typing import *",
