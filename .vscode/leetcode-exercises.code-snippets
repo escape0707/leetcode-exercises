@@ -26,6 +26,7 @@
     "scope": "python",
     "body": [
       "",
+      "from bisect import *",
       "from collections import *",
       "from functools import *",
       "from heapq import *",
