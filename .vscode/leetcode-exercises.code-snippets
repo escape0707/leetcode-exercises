@@ -31,6 +31,7 @@
       "from functools import *",
       "from heapq import *",
       "from itertools import *",
+      "from math import *",
       "from operator import *",
       "from typing import *",
       "",
