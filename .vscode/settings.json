@@ -1,5 +1,7 @@
 {
-  "python.linting.flake8Args": ["--ignore=F403,F405"],
+  "python.linting.flake8Args": [
+    "--ignore=F401,F403,F405"
+  ],
   "files.associations": {
     "unordered_map": "cpp",
     "functional": "cpp",
