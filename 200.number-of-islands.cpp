@@ -60,8 +60,8 @@ class Solution {
         grid[i][j] = '0';
         static constexpr array<pair<int, int>, 4> direction = {
             {{-1, -0}, {0, +1}, {+1, 0}, {0, -1}}};
-        for (const auto &dir : direction) {
-          dfs_ref(i + dir.first, j + dir.second, dfs_ref);
+        for (const auto &[x, y] : direction) {
+          dfs_ref(i + x, j + y, dfs_ref);
         }
       };
       dfs_impl(i, j, dfs_impl);
