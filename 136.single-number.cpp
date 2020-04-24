@@ -41,25 +41,6 @@
 using namespace std;
 
 // @lc code=start
-// class Solution {
-//    public:
-//     int singleNumber(vector<int> &nums) {
-//         unordered_map<int, int> counter;
-//         for (const int num : nums) {
-//             ++counter[num];
-//         }
-//         for (const pair<int, int> &p : counter) {
-//             if (p.second == 1) {
-//                 return p.first;
-//             }
-//         }
-//         throw invalid_argument(nullptr);
-//     }
-// };
-
-#include <bits/stdc++.h>
-using namespace std;
-
 class Solution {
  public:
   int singleNumber(vector<int> &nums) {
