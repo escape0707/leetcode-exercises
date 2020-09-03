@@ -14,7 +14,7 @@
 # Testcase Example:  '1\n2'
 #
 # You are given K eggs, and you have access to a building with N floors from 1
-# to N. 
+# to N.
 #
 # Each egg is identical in function, and if an egg breaks, you cannot drop it
 # again.
@@ -24,7 +24,7 @@
 # floor F will not break.
 #
 # Each move, you may take an egg (if you have an unbroken one) and drop it from
-# any floor X (with 1 <= X <= N). 
+# any floor X (with 1 <= X <= N).
 #
 # Your goal is to know with certainty what the value of F is.
 #
@@ -97,7 +97,7 @@ class Solution:
             canTryFloors[-1] += canTryFloors[-2] + 1
             if canTryFloors[-1] >= N:
                 return moves
-            for i in range(K - 1, 0, -1):
+            for i in reversed(range(1, K)):
                 canTryFloors[i] += canTryFloors[i - 1] + 1
         raise ValueError("Invalid arguments")
 # @lc code=end
